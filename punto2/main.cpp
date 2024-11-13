@@ -4,7 +4,7 @@
 
 using namespace std;
 
-template <typename T>
+template <class T>
 int ContarX(const Fila<T> &fila, T x)
 {
     int contador = 0;
@@ -47,14 +47,15 @@ int main()
     cout << "El número 2.2 aparece " << ContarX(filaDouble, 2.2) << " veces en la fila de doubles." << endl;
 
     // Probar con strings
-    /*     Fila<string> filaString;
+         Fila<string> filaString;
         filaString.Enfila("apple");
         filaString.Enfila("banana");
         filaString.Enfila("apple");
         filaString.Enfila("cherry");
         filaString.Enfila("apple");
         cout << "Fila de strings: ";
-        cout << "La palabra 'apple' aparece " << ContarX(filaString, "apple") << " veces en la fila de strings." << endl; */
+        string dato= "apple";
+        cout << "La palabra 'apple' aparece " << ContarX(filaString, dato) << " veces en la fila de strings." << endl; 
 
     return 0;
 }

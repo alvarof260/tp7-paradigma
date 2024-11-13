@@ -4,12 +4,15 @@
 #include <iostream>
 using std::cout, std::endl;
 
-template <class T>
+template <class T> 
 struct Nodo
 {
     T dato;
-    struct Nodo *sig;
+    struct Nodo<T> *sig;
 };
+
+template <class T>
+class IteradorFila;
 
 template <class T>
 class Fila
@@ -61,7 +64,10 @@ bool Fila<T>::EsFilaVacia()
 template <class T>
 T Fila<T>::Frente()
 {
-    return this->frente->dato;
+    if(this->EsFilaVacia())
+        return *(new T);
+    else
+        return this->frente->dato;
 }
 
 template <class T>
